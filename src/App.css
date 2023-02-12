@@ -1,0 +1,270 @@
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* padding: 2rem; */
+  text-align: center;
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to left, rgb(31, 0, 71) 5%, rgb(4, 4, 61) 30%, rgb(2, 0, 33) 70%);
+}
+
+/* section {
+  height: 100vh;
+} */
+
+.sinhala_font {
+  font-family: 'Abhaya Libre', serif;
+}
+
+
+
+.navbar {
+  margin-top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 50px;
+  align-items: center;
+  border-bottom-width: 0.5px;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+}
+
+.nav_link_list {
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+
+.home {
+  padding-top: 4.5em;
+  height: 110vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.home div {
+  width: 50vw;
+  /* padding: 20px; */
+}
+
+.mainHeading {
+  width: 20vw;
+  padding-top: 15vh;
+  padding-left: 20vw;
+  /* font-size: 1.3em; */
+  text-align: start;
+  background: #A6C657;
+  background: linear-gradient(to bottom, #ffe329 50%, #A6C657 85%, #688A00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sub_heading {
+  font-family: 'Abhaya Libre', serif;
+  width: 10vw;
+  padding-left: 20vw;
+  /* font-size: 1.3em; */
+  margin-top: 20px;
+  text-align: start;
+}
+
+.image-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.image_man_washingMachine {
+  height: 70vh;
+  justify-content: center;
+}
+
+.standard_section {
+  /* height: 110vh; */
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card_container {
+  padding-top: 70px;
+  align-self: center;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card {
+  width: 12vw;
+  margin: 20px;
+  margin-top: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card div {
+  padding-top: 30px;
+  font-size: 0.7em;
+}
+
+
+
+.section1 {
+  padding-top: 4.5em;
+  height: 110vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.equalSection {
+  height: 110vh;
+  padding-top: 5em;
+  display: grid;
+  grid-template-columns: auto 40%;
+  text-align: left;
+  height: max-content;
+}
+
+.billboard_section {
+  display: grid;
+  grid-template-columns: 62% 38%;
+  text-align: left;
+  height: max-content;
+  border-bottom: 5px solid pink;
+}
+
+
+.gradient_text {
+  background: linear-gradient(to bottom, #ffe329 10%, #84b310 85%, #6d8f08 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.specializedPricing {
+  padding-left: 5em;
+  padding-top: 7em;
+  padding-bottom: 3em;
+
+}
+
+
+
+.equalSection img {
+  align-self: flex-end;
+  height: max-content;
+}
+
+.washingMachineHub {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.washingMachineHub_left {
+  height: 80vh;
+  padding: 50px;
+  background: linear-gradient(to top, black, transparent),
+    url("./assets/washing_machine_hub.png");
+  ;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-right: 5px solid pink;
+  border-bottom: 5px solid pink;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.section1 div {
+  padding: 50px;
+  text-align: start;
+  /* width: 50vw; */
+  /* padding: 20px; */
+}
+
+.join_us_div {
+  background: url("./assets/handshake.png");
+  aspect-ratio: 1920 / 977;
+  width: 100vw;
+
+}
+
+.mobileWeb {
+  display: none;
+}
+
+.desktop_web {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .mobileWeb {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desktop_web {
+    display: none !important;
+  }
+
+  .nav_link_list {
+    display: none;
+  }
+
+  .section1 {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home div {
+    width: 100vw;
+    /* padding: 20px; */
+  }
+
+  .mainHeading {
+    padding-top: 10vh;
+    padding-left: 50px;
+  }
+
+  .sub_heading {
+    font-size: 1.2em;
+    padding-left: 50px;
+    margin-top: 20px;
+    text-align: start;
+  }
+
+  .image_man_washingMachine {
+    height: 40vh;
+  }
+
+  .card_container {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,53 @@
+.card_container_mobile {
+    padding-top: 20px;
+    align-self: center;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card_mobile {
+    margin-top: 0;
+    margin: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card_mobile div {
+    padding-top: 10px;
+    font-size: 0.8em;
+}
+
+
+
+.menu-container {
+    background-image: radial-gradient(circle 610px at 5.2% 51.6%, rgb(78, 80, 150) 0%, rgba(7, 3, 53, 1) 97.5%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.2);
+}
+
+.washing_machine_backgound_mobile {
+    margin-top: 50px;
+    padding: 50px;
+    height: 35vh;
+    background: linear-gradient(to top, black, transparent), url("./assets/washing_machine_hub.png");
+    ;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-right: 5px solid pink;
+    border-bottom: 5px solid pink;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.mobile_nav {
+    backdrop-filter: blur(13.5px);
+}
