@@ -20,7 +20,7 @@
 
 .card_mobile div {
     padding-top: 10px;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 
@@ -32,16 +32,13 @@
 }
 
 .washing_machine_backgound_mobile {
-    margin-top: 50px;
     padding: 50px;
     height: 35vh;
     background: linear-gradient(to top, black, transparent), url("./assets/washing_machine_hub.png");
     ;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    border-right: 5px solid pink;
-    border-bottom: 5px solid pink;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

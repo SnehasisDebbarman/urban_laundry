@@ -4,7 +4,7 @@ import { FaHamburger } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "./assets/logo-mark.png";
 import { motion } from "framer-motion";
-import wash from "./assets/man_washing_machine.png";
+import wash from "./assets/mav_wave_2.png";
 import wave2 from "./assets/wave_2.png";
 import Blogs from "./Blogs";
 import ladyWithCloths1 from "./assets/lady_with_cloths_1.png";
@@ -131,18 +131,10 @@ export default function MobileWeb() {
             <img
               style={{
                 paddingTop: "50px",
-                height: "50vh",
+                // height: "100vh",
                 alignSelf: "center",
               }}
               src={wash}
-              alt="man with Urban Laundry washing Machine"
-            />
-            <img
-              style={{
-                marginTop: "-90px",
-                alignSelf: "center",
-              }}
-              src={wave2}
               alt="man with Urban Laundry washing Machine"
             />
             <div style={{ height: "5px", backgroundColor: "pink" }}></div>
@@ -181,13 +173,16 @@ export default function MobileWeb() {
               <br />
               The Urban Laundry Team.'
             </p>
-            <img
-              style={{
-                alignSelf: "center",
-              }}
-              src={ladyWithCloths1}
-              alt="man with Urban Laundry washing Machine"
-            />
+            <div>
+              <img
+                style={{
+                  alignSelf: "center",
+                  height: "50vh",
+                }}
+                src={ladyWithCloths1}
+                alt="lady with laundry"
+              />
+            </div>
             <div
               style={{
                 width: "100vw",
@@ -207,7 +202,7 @@ export default function MobileWeb() {
               <p
                 style={{
                   color: "#A6C657",
-                  fontSize: "1.2em",
+                  fontSize: "2em",
                   textAlign: "end",
                   // lineHeight: "0em",
                 }}
@@ -291,13 +286,15 @@ export default function MobileWeb() {
                 APPROACH TO IMPECCABLE QUALITY
               </p>
             </div>
-            <img
-              src={ten_step}
-              style={{
-                justifyContent: "center",
-                padding: "5px 30px",
-              }}
-            />
+            <div>
+              <img
+                src={ten_step}
+                style={{
+                  justifyContent: "center",
+                  padding: "5px 30px",
+                }}
+              />
+            </div>
           </section>
           <section>
             <div style={{ height: "5px", backgroundColor: "pink" }}></div>{" "}

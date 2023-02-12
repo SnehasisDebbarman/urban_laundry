@@ -89,9 +89,9 @@ function App() {
               </div>
             </section>
             <img
-              src={waves}
+              src={wave2}
               style={{
-                marginTop: "-270px",
+                marginTop: "-300px",
                 opacity: 1,
               }}
             />
@@ -103,10 +103,7 @@ function App() {
                   placeItems: "center",
                 }}
               >
-                <img
-                  className="image_man_washingMachine"
-                  src={ladyWithCloths1}
-                />
+                <img style={{ paddingLeft: "50px" }} src={ladyWithCloths1} />
               </div>
               <div>
                 <h2>ABOUT US</h2>
