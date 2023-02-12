@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { animate, useScroll } from "framer-motion";
+
+import { useEffect, useRef } from "react";
 import "./mobileWeb.css";
 import { FaHamburger } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -33,6 +36,31 @@ export default function MobileWeb() {
     "Blogs",
     "Locate us",
   ];
+  function Counter({ from, to }) {
+    const ref = useRef();
+
+    return (
+      <div style={{ display: "flex" }}>
+        <div> ₹</div>
+        <motion.div
+          style={{ width: "1.5em" }}
+          initial="hidden"
+          whileInView="visible"
+          ref={ref}
+          onViewportEnter={() => {
+            const controls = animate(from, to, {
+              duration: 1.5,
+              onUpdate(value) {
+                ref.current.textContent = value.toFixed(0);
+              },
+            });
+            return () => controls.stop();
+          }}
+        />
+        <div style={{ fontSize: "0.4em", alignSelf: "center" }}>per KG</div>
+      </div>
+    );
+  }
   const Menu = () => {
     return (
       <motion.div
@@ -484,8 +512,9 @@ export default function MobileWeb() {
               </div>
               <div style={{ fontSize: "0.7em" }}>laundry services for</div>
               <div>only</div>
-              <h2>80 Rupees</h2>
-              per KG
+              <h2>
+                <Counter from={0} to={80} />
+              </h2>
               <div style={{ fontSize: "0.7em" }}>
                 {" "}
                 with our wash and fold option{" "}

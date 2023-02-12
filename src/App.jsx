@@ -106,7 +106,7 @@ function App() {
                 <img style={{ paddingLeft: "50px" }} src={ladyWithCloths1} />
               </div>
               <div>
-                <h2>ABOUT US</h2>
+                <h2>About Our Effortless Laundry Services</h2>
                 <h3> Welcome to Urban Laundry!</h3>
                 <br />
                 <p>
