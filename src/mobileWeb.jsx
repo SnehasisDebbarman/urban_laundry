@@ -24,6 +24,12 @@ import billboard from "./assets/billboard.png";
 import handshake from "./assets/handshake.png";
 import map from "./assets/map.png";
 import washingMachine from "./assets/washing_machine_hub.png";
+import manWave from "./assets/man_wave.svg";
+
+import Lottie from "lottie-react";
+import shampoo from "./assets/shampoo.json";
+import areaMap from "./assets/area_map.json";
+import shampooImg from "./assets/shampoo.svg";
 
 export default function MobileWeb() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -68,7 +74,8 @@ export default function MobileWeb() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         style={{
-          top: "85px",
+          top: 85,
+          left: 0,
           position: "fixed",
           height: "100vh",
           width: "100vw",
@@ -88,18 +95,63 @@ export default function MobileWeb() {
           }}
         >
           <ul>
-            {navMenu.map((it) => (
-              <li
-                key={it}
-                onClick={() => {
-                  setMenuVisible(false);
-                  setBlogVisible(it === "Blogs" ? true : false);
-                  window.location.replace("/#" + it);
-                }}
-              >
-                {it}
-              </li>
-            ))}
+            <a
+              onClick={() => {
+                setMenuVisible(false);
+                setBlogVisible(false);
+              }}
+              href="#Home_mobile"
+            >
+              <li>Home</li>
+            </a>
+            <a
+              onClick={() => {
+                setMenuVisible(false);
+                setBlogVisible(false);
+              }}
+              href="#Services_mobile"
+            >
+              <li>Services</li>
+            </a>
+
+            <a
+              onClick={() => {
+                setMenuVisible(false);
+                setBlogVisible(false);
+              }}
+              href="#Pricing_mobile"
+            >
+              {" "}
+              <li>Pricing</li>
+            </a>
+            <a
+              onClick={() => {
+                setMenuVisible(false);
+                setBlogVisible(false);
+              }}
+              href="#Get_franchises_mobile"
+            >
+              <li>Get Franchises</li>
+            </a>
+            <a
+              onClick={() => {
+                setMenuVisible(false);
+                setBlogVisible(true);
+              }}
+              href="#Blogs_mobile"
+            >
+              <li>Blogs</li>
+            </a>
+            <a
+              onClick={() => {
+                setMenuVisible(false);
+                setBlogVisible(false);
+              }}
+              href="#Locate_us_mobile"
+            >
+              {" "}
+              <li>Locate us</li>
+            </a>
           </ul>
         </div>
       </motion.div>
@@ -138,10 +190,10 @@ export default function MobileWeb() {
       ) : (
         <>
           <section
+            id="Home_mobile"
             style={{
-              marginTop: "100px",
-              // maxWidth: "100vw",
-              padding: "20px",
+              marginTop: "120px",
+              padding: "20px 0",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -158,11 +210,10 @@ export default function MobileWeb() {
             </div>
             <img
               style={{
-                paddingTop: "50px",
-                // height: "100vh",
+                paddingTop: "10px",
                 alignSelf: "center",
               }}
-              src={wash}
+              src={manWave}
               alt="man with Urban Laundry washing Machine"
             />
             <div style={{ height: "5px", backgroundColor: "pink" }}></div>
@@ -170,6 +221,7 @@ export default function MobileWeb() {
           <div style={{ height: "5px", backgroundColor: "pink" }}></div>
           {/* <div style={{ height: "5px", background: "pink" }}></div> */}
           <section
+            id="Services_mobile"
             className="about_us_mobile"
             style={{
               padding: "30px",
@@ -260,9 +312,13 @@ export default function MobileWeb() {
                 </div>
                 <div className="card_mobile">
                   <img
-                    src={detergent}
+                    src={shampooImg}
                     style={{
+                      backgroundColor: "white",
+                      height: "21vh",
                       justifyContent: "center",
+                      borderRadius: "10px",
+                      padding: "10px",
                     }}
                   />
                   <div> GERMAN EXPERTISE FOR AN ECO-FRIENDLY CLEAN</div>
@@ -349,7 +405,7 @@ export default function MobileWeb() {
             </div>
           </section>
           <div style={{ height: "5px", backgroundColor: "pink" }}></div>
-          <section>
+          <section id="Services_mobile">
             <div
               style={{
                 padding: "50px",
@@ -477,7 +533,7 @@ export default function MobileWeb() {
             </p>
           </section>
           <div style={{ height: "5px", backgroundColor: "pink" }}></div>
-          <section>
+          <section id="Pricing_mobile">
             <div
               style={{
                 textAlign: "start",
@@ -540,7 +596,7 @@ export default function MobileWeb() {
             </div>
           </section>
           <div style={{ height: "5px", backgroundColor: "pink" }}></div>
-          <section>
+          <section id="Get_franchises_mobile">
             <img
               src={billboard}
               style={{
@@ -725,7 +781,7 @@ export default function MobileWeb() {
             <img src={handshake} className="join_us_div" />
           </section>
           <div style={{ height: "5px", backgroundColor: "pink" }}></div>
-          <section>
+          <section id="Locate_us_mobile">
             <div
               style={{
                 textAlign: "start",
@@ -760,18 +816,19 @@ export default function MobileWeb() {
                 </div>
               </p>
             </div>
-            <img
-              src={map}
+            <Lottie
               style={{
-                justifyContent: "center",
-                // padding: "px 30px",
+                width: "100%",
               }}
+              animationData={areaMap}
+              loop={true}
             />
             <button
               style={{
                 backgroundColor: "green",
                 marginTop: "20px",
                 borderRadius: "30px",
+                marginBottom: "50px",
               }}
             >
               map

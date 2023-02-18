@@ -12,7 +12,7 @@ import ladyWithCloths4 from "./assets/lady_with_cloths_4.png";
 import logo from "./assets/LOGO.png";
 import woolmark from "./assets/woolmark.png";
 import hygenicStamp from "./assets/hygenic_stamp.png";
-import expert from "./assets/expert.png";
+import expert from "./assets/washing_shop.svg";
 import detergent from "./assets/detergent.png";
 import ten_step from "./assets/ten_step.png";
 import thinking_man from "./assets/thinking_man.png";
@@ -21,6 +21,11 @@ import handshake from "./assets/handshake.png";
 import map from "./assets/map.png";
 import MobileWeb from "./mobileWeb";
 import wave2 from "./assets/wave_2.png";
+
+import Lottie from "lottie-react";
+import shampoo from "./assets/shampoo.json";
+import areaMap from "./assets/area_map.json";
+import shampooImg from "./assets/shampoo.svg";
 
 function App() {
   const navMenu = [
@@ -38,8 +43,61 @@ function App() {
       <main className="desktop_web">
         <nav className="navbar">
           <img src={logo} style={{ height: "50px" }} />
+
           <ul className="nav_link_list">
-            {navMenu.map((it) => (
+            <a
+              onClick={() => {
+                setBlogVisible(false);
+              }}
+              href="#Home"
+            >
+              <li style={{ color: "white" }}>Home</li>
+            </a>
+            <a
+              onClick={() => {
+                setBlogVisible(false);
+              }}
+              href="#Services"
+            >
+              <li style={{ color: "white" }}>Services</li>
+            </a>
+
+            <a
+              onClick={() => {
+                setBlogVisible(false);
+              }}
+              href="#Pricing"
+            >
+              {" "}
+              <li style={{ color: "white" }}>Pricing</li>
+            </a>
+            <a
+              onClick={() => {
+                setBlogVisible(false);
+              }}
+              href="#Get Franchises"
+            >
+              <li style={{ color: "white" }}>Get Franchises</li>
+            </a>
+            <a
+              onClick={() => {
+                setBlogVisible(true);
+              }}
+              href="#Blogs"
+            >
+              <li style={{ color: "white" }}>Blogs</li>
+            </a>
+            <a
+              onClick={() => {
+                setBlogVisible(false);
+              }}
+              href="#Locate Us"
+            >
+              {" "}
+              <li style={{ color: "white" }}>Locate us</li>
+            </a>
+          </ul>
+          {/* {navMenu.map((it) => (
               <li
                 className="nav_item"
                 key={it}
@@ -50,8 +108,7 @@ function App() {
               >
                 {it}
               </li>
-            ))}
-          </ul>
+            ))} */}
         </nav>
         {blogVisible ? (
           <Blogs />
@@ -86,6 +143,8 @@ function App() {
               </div>
               <div className="image-container">
                 <img className="image_man_washingMachine" src={wash} />
+
+                {/* <Lottie animationData={laundry} loop={true} /> */}
               </div>
             </section>
             <img
@@ -181,9 +240,13 @@ function App() {
                 </div>
                 <div className="card">
                   <img
-                    src={detergent}
+                    src={shampooImg}
                     style={{
+                      backgroundColor: "white",
+                      height: "25vh",
                       justifyContent: "center",
+                      borderRadius: "10px",
+                      padding: "10px",
                     }}
                   />
                   <div> GERMAN EXPERTISE FOR AN ECO-FRIENDLY CLEAN</div>
@@ -203,8 +266,21 @@ function App() {
                     src={expert}
                     style={{
                       justifyContent: "center",
+                      backgroundColor: "rgba(255, 255, 255,1)",
+                      borderRadius: "10px",
+                      padding: "10pxAsset 1.svg",
                     }}
                   />
+                  {/* <Lottie
+                    style={{
+                      justifyContent: "center",
+                      backgroundColor: "rgba(255, 255, 255,1)",
+                      borderRadius: "10px",
+                      padding: "10pxAsset 1.svg",
+                    }}
+                    animationData={shampoo}
+                    loop={true}
+                  /> */}
                   <div>A TEAM OF EXPERIENCED PROFESSIONALS</div>
                 </div>
               </div>
@@ -699,7 +775,14 @@ function App() {
                   justifyContent: "center",
                 }}
               >
-                <img src={map} alt="" srcset="" />
+                {/* <img src={map} alt="" srcset="" /> */}
+                <Lottie
+                  style={{
+                    width: "80%",
+                  }}
+                  animationData={areaMap}
+                  loop={true}
+                />
                 <button
                   style={{
                     backgroundColor: "green",
