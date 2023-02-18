@@ -288,7 +288,7 @@ function App() {
             <div
               style={{
                 height: "5px",
-                backgroundColor: "pink",
+                backgroundColor: "rgb(158, 31, 255)",
               }}
             ></div>
             <section style={{ padding: "50px" }}>
@@ -317,7 +317,7 @@ function App() {
             <div
               style={{
                 height: "5px",
-                backgroundColor: "pink",
+                backgroundColor: "rgb(158, 31, 255)",
               }}
             ></div>
             <section className="washingMachineHub">
@@ -401,7 +401,7 @@ function App() {
             <div
               style={{
                 height: "5px",
-                backgroundColor: "pink",
+                backgroundColor: "rgb(158, 31, 255)",
               }}
             ></div>
             <section
@@ -486,7 +486,7 @@ function App() {
             <div
               style={{
                 height: "5px",
-                backgroundColor: "pink",
+                backgroundColor: "rgb(158, 31, 255)",
               }}
             ></div>
             <section id="Pricing" className="equalSection">
@@ -537,7 +537,7 @@ function App() {
             <div
               style={{
                 height: "5px",
-                backgroundColor: "pink",
+                backgroundColor: "rgb(158, 31, 255)",
               }}
             ></div>
             <section className="billboard_section" id="Get Franchises">

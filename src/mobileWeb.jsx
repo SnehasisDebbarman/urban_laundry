@@ -216,10 +216,14 @@ export default function MobileWeb() {
               src={manWave}
               alt="man with Urban Laundry washing Machine"
             />
-            <div style={{ height: "5px", backgroundColor: "pink" }}></div>
+            <div
+              style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+            ></div>
           </section>
-          <div style={{ height: "5px", backgroundColor: "pink" }}></div>
-          {/* <div style={{ height: "5px", background: "pink" }}></div> */}
+          <div
+            style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+          ></div>
+          {/* <div style={{ height: "5px", background: "rgb(158, 31, 255)" }}></div> */}
           <section
             id="Services_mobile"
             className="about_us_mobile"
@@ -274,7 +278,9 @@ export default function MobileWeb() {
             >
               EXPERIENCE THE ULTIMATE CLEAN
             </div>
-            <div style={{ height: "5px", backgroundColor: "pink" }}></div>{" "}
+            <div
+              style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+            ></div>{" "}
           </section>
           <section>
             <div style={{ paddingRight: "20px" }}>
@@ -344,9 +350,13 @@ export default function MobileWeb() {
                 </div>
               </div>
             </div>
-            <div style={{ height: "5px", backgroundColor: "pink" }}></div>{" "}
+            <div
+              style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+            ></div>{" "}
           </section>
-          <div style={{ height: "5px", backgroundColor: "pink" }}></div>
+          <div
+            style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+          ></div>
           <section style={{ padding: "50px 0px" }}>
             <div style={{ paddingLeft: "20px" }}>
               <h2
@@ -381,7 +391,9 @@ export default function MobileWeb() {
             </div>
           </section>
           <section>
-            <div style={{ height: "5px", backgroundColor: "pink" }}></div>{" "}
+            <div
+              style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+            ></div>{" "}
             <div className="washing_machine_backgound_mobile">
               <h2
                 style={{
@@ -404,7 +416,9 @@ export default function MobileWeb() {
               </p>
             </div>
           </section>
-          <div style={{ height: "5px", backgroundColor: "pink" }}></div>
+          <div
+            style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+          ></div>
           <section id="Services_mobile">
             <div
               style={{
@@ -460,7 +474,9 @@ export default function MobileWeb() {
                 industry.
               </p>
             </div>
-            <div style={{ height: "5px", backgroundColor: "pink" }}></div>
+            <div
+              style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+            ></div>
           </section>
           <section style={{ padding: "50px" }}>
             <h2
@@ -532,7 +548,9 @@ export default function MobileWeb() {
               experience the quality of our services for yourself!
             </p>
           </section>
-          <div style={{ height: "5px", backgroundColor: "pink" }}></div>
+          <div
+            style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+          ></div>
           <section id="Pricing_mobile">
             <div
               style={{
@@ -595,7 +613,9 @@ export default function MobileWeb() {
               />
             </div>
           </section>
-          <div style={{ height: "5px", backgroundColor: "pink" }}></div>
+          <div
+            style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+          ></div>
           <section id="Get_franchises_mobile">
             <img
               src={billboard}
@@ -661,7 +681,9 @@ export default function MobileWeb() {
               </p>
             </div>
           </section>
-          <div style={{ height: "5px", backgroundColor: "pink" }}></div>
+          <div
+            style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+          ></div>
           <section>
             <div
               style={{
@@ -742,7 +764,9 @@ export default function MobileWeb() {
               }}
             />
           </section>
-          <div style={{ height: "5px", backgroundColor: "pink" }}></div>
+          <div
+            style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+          ></div>
           <section>
             <div
               style={{
@@ -780,7 +804,9 @@ export default function MobileWeb() {
             </div>
             <img src={handshake} className="join_us_div" />
           </section>
-          <div style={{ height: "5px", backgroundColor: "pink" }}></div>
+          <div
+            style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
+          ></div>
           <section id="Locate_us_mobile">
             <div
               style={{

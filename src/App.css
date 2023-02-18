@@ -152,7 +152,7 @@ body {
   grid-template-columns: 62% 38%;
   text-align: left;
   height: max-content;
-  border-bottom: 5px solid pink;
+  border-bottom: 5px solid rgb(158, 31, 255);
 }
 
 
@@ -190,8 +190,8 @@ body {
   ;
   background-position: center;
   background-repeat: no-repeat;
-  border-right: 5px solid pink;
-  border-bottom: 5px solid pink;
+  border-right: 5px solid rgb(158, 31, 255);
+  border-bottom: 5px solid rgb(158, 31, 255);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
