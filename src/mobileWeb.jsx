@@ -1,47 +1,37 @@
 import React, { useState } from "react";
-import { animate, useScroll } from "framer-motion";
+import { animate } from "framer-motion";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import "./mobileWeb.css";
-import { FaHamburger } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
-import logo from "./assets/logo-mark.png";
+import logo from "./assets/LOGO.png";
 import { motion } from "framer-motion";
-import wash from "./assets/mav_wave_2.png";
-import wave2 from "./assets/wave_2.png";
 import Blogs from "./Blogs";
 import ladyWithCloths1 from "./assets/lady_with_cloths_1.png";
-import ladyWithCloths2 from "./assets/lady_with_cloths_2.png";
-import ladyWithCloths3 from "./assets/lady_with_cloths_3.png";
 import ladyWithCloths4 from "./assets/lady_with_cloths_4.png";
 import woolmark from "./assets/woolmark.png";
 import hygenicStamp from "./assets/hygenic_stamp.png";
 import expert from "./assets/expert.png";
-import detergent from "./assets/detergent.png";
-import ten_step from "./assets/ten_step.png";
+import ten_step from "./assets/ten_step_mobile.png";
 import thinking_man from "./assets/thinking_man.png";
 import billboard from "./assets/billboard.png";
 import handshake from "./assets/handshake.png";
-import map from "./assets/map.png";
-import washingMachine from "./assets/washing_machine_hub.png";
-import manWave from "./assets/man_wave.svg";
+import manWave from "./assets/man_wave_3_mobile.png";
 
 import Lottie from "lottie-react";
-import shampoo from "./assets/shampoo.json";
 import areaMap from "./assets/area_map.json";
-import shampooImg from "./assets/shampoo.svg";
+import shampooImg from "./assets/detergent.svg";
+
+import phoneIcon from "./assets/icons/phone.svg";
+import emailIcon from "./assets/icons/email.svg";
+import mapIcon from "./assets/icons/map.svg";
+
+import landingText from "./assets/icons/landing_page_text.png";
 
 export default function MobileWeb() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [blogVisible, setBlogVisible] = useState(false);
-  const navMenu = [
-    "Home",
-    "Services",
-    "Pricing",
-    "Get Franchises",
-    "Blogs",
-    "Locate us",
-  ];
+
   function Counter({ from, to }) {
     const ref = useRef();
 
@@ -192,25 +182,35 @@ export default function MobileWeb() {
           <section
             id="Home_mobile"
             style={{
-              marginTop: "120px",
-              padding: "20px 0",
+              marginTop: "150px",
+              padding: "20px 0px",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
             }}
           >
-            <div className="experience_mobile">
-              <p>EXPERIENCE EFFORTLESS AND PRISTINE CLEAN CLOTHES WITH</p>
-              <h1 style={{ fontSize: "2.5em" }}>Urban Laundry</h1>
-              <p className="sinhala_font">
-                {" "}
-                The one-stop solution for Dry cleaning, Laundry, and Steam iron
-                services
-              </p>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className="experience_mobile"
+            >
+              <img
+                src={landingText}
+                style={{
+                  alignSelf: "center",
+                  width: "60%",
+                  margin: " 0 30px",
+                }}
+                alt=""
+                srcset=""
+              />
             </div>
             <img
               style={{
-                paddingTop: "10px",
                 alignSelf: "center",
               }}
               src={manWave}
@@ -311,6 +311,7 @@ export default function MobileWeb() {
                   <img
                     src={woolmark}
                     style={{
+                      aspectRatio: "1/1",
                       justifyContent: "center",
                     }}
                   />
@@ -320,11 +321,7 @@ export default function MobileWeb() {
                   <img
                     src={shampooImg}
                     style={{
-                      backgroundColor: "white",
-                      height: "21vh",
-                      justifyContent: "center",
-                      borderRadius: "10px",
-                      padding: "10px",
+                      aspectRatio: "1/1",
                     }}
                   />
                   <div> GERMAN EXPERTISE FOR AN ECO-FRIENDLY CLEAN</div>
@@ -334,6 +331,7 @@ export default function MobileWeb() {
                   <img
                     src={hygenicStamp}
                     style={{
+                      aspectRatio: "1/1",
                       justifyContent: "center",
                     }}
                   />
@@ -343,6 +341,7 @@ export default function MobileWeb() {
                   <img
                     src={expert}
                     style={{
+                      aspectRatio: "1/1",
                       justifyContent: "center",
                     }}
                   />
@@ -385,7 +384,7 @@ export default function MobileWeb() {
                 src={ten_step}
                 style={{
                   justifyContent: "center",
-                  padding: "5px 30px",
+                  padding: "5px 50px",
                 }}
               />
             </div>
@@ -595,7 +594,7 @@ export default function MobileWeb() {
               </div>
               <button
                 style={{
-                  backgroundColor: "green",
+                  // backgroundColor: "green",
                   marginTop: "20px",
                   borderRadius: "30px",
                 }}
@@ -748,7 +747,7 @@ export default function MobileWeb() {
 
               <button
                 style={{
-                  backgroundColor: "green",
+                  // backgroundColor: "green",
                   marginTop: "20px",
                   borderRadius: "30px",
                 }}
@@ -772,7 +771,7 @@ export default function MobileWeb() {
               style={{
                 width: "100vw",
                 position: "absolute",
-                paddingTop: "w0px",
+                paddingTop: "70px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -781,7 +780,7 @@ export default function MobileWeb() {
               <div>
                 <button
                   style={{
-                    backgroundColor: "green",
+                    // backgroundColor: "green",
                     marginTop: "5px",
                     borderRadius: "15px",
                     fontSize: "0.8em",
@@ -818,29 +817,72 @@ export default function MobileWeb() {
                 padding: "60px 50px",
               }}
             >
-              <div className="gradient_text">
-                <p
+              <div>
+                <h2> LOCATE US</h2>
+                <div
                   style={{
-                    lineHeight: "1.2em",
-                    color: "yellow",
-                    fontSize: "3em",
-                    textAlign: "start",
-                    fontWeight: "300",
+                    display: "flex",
+                    gap: "10px",
+                    justifyContent: "start",
+                    alignItems: "center",
+                    padding: "10px 0",
                   }}
                 >
-                  Locate Us
-                </p>
-              </div>
-              <p style={{ fontSize: "0.7em", paddingRight: "50px" }}>
-                <div>
-                  <p> +91 6362 591 993 </p>
-                  <p> info.theurbanlaundryblr@gmail.com</p>
-                  <p>
+                  <img
+                    style={{
+                      width: "40px",
+                    }}
+                    src={phoneIcon}
+                    alt=""
+                    srcset=""
+                  />
+                  <a href="tel:+916362591993">+91 6362 591 993 </a>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "10px",
+                    justifyContent: "start",
+                    alignItems: "center",
+                    padding: "10px 0",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "40px",
+                    }}
+                    src={emailIcon}
+                    alt=""
+                    srcset=""
+                  />
+                  <a href="mailto:info.theurbanlaundryblr@gmail.com">
+                    info.theurbanlaundryblr@gmail.com
+                  </a>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "10px",
+                    justifyContent: "start",
+                    alignItems: "center",
+                    padding: "10px 0",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "40px",
+                    }}
+                    src={mapIcon}
+                    alt=""
+                    srcset=""
+                  />
+                  <a href="https://www.google.com/maps/place/The+Urban+Laundry/@13.003984,77.5499778,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae3d954a7b90c3:0x4551aba1ac6084c3!8m2!3d13.0039788!4d77.5521665">
+                    {" "}
                     # 17/388/17, 19th H Road,Ist N Block, Rajajinagar,
                     Bengaluru, Karnataka 560010
-                  </p>
+                  </a>
                 </div>
-              </p>
+              </div>
             </div>
             <Lottie
               style={{
@@ -849,16 +891,18 @@ export default function MobileWeb() {
               animationData={areaMap}
               loop={true}
             />
-            <button
-              style={{
-                backgroundColor: "green",
-                marginTop: "20px",
-                borderRadius: "30px",
-                marginBottom: "50px",
-              }}
-            >
-              map
-            </button>
+            <a href="https://www.google.com/maps/place/The+Urban+Laundry/@13.003984,77.5499778,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae3d954a7b90c3:0x4551aba1ac6084c3!8m2!3d13.0039788!4d77.5521665">
+              <button
+                style={{
+                  // backgroundColor: "green",
+                  marginTop: "20px",
+                  borderRadius: "30px",
+                  marginBottom: "50px",
+                }}
+              >
+                map
+              </button>
+            </a>
           </section>
         </>
       )}

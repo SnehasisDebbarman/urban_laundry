@@ -11,11 +11,18 @@
 .card_mobile {
     margin-top: 0;
     margin: 30px;
+    height: 35vh;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: "white";
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1/1;
 }
 
 .card_mobile div {
@@ -48,3 +55,5 @@
 .mobile_nav {
     backdrop-filter: blur(13.5px);
 }
+
+.experience_mobile {}

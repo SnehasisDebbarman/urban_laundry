@@ -1,31 +1,28 @@
 import { useState } from "react";
 import "./App.css";
-import { FaBeer } from "react-icons/fa";
 import wash from "./assets/man_washing_machine.png";
-import waves from "./assets/waves.png";
 import { motion } from "framer-motion";
 import Blogs from "./Blogs";
 import ladyWithCloths1 from "./assets/lady_with_cloths_1.png";
-import ladyWithCloths2 from "./assets/lady_with_cloths_2.png";
-import ladyWithCloths3 from "./assets/lady_with_cloths_3.png";
 import ladyWithCloths4 from "./assets/lady_with_cloths_4.png";
 import logo from "./assets/LOGO.png";
 import woolmark from "./assets/woolmark.png";
 import hygenicStamp from "./assets/hygenic_stamp.png";
 import expert from "./assets/washing_shop.svg";
-import detergent from "./assets/detergent.png";
 import ten_step from "./assets/ten_step.png";
 import thinking_man from "./assets/thinking_man.png";
 import billboard from "./assets/billboard.png";
 import handshake from "./assets/handshake.png";
-import map from "./assets/map.png";
 import MobileWeb from "./mobileWeb";
 import wave2 from "./assets/wave_2.png";
 
 import Lottie from "lottie-react";
-import shampoo from "./assets/shampoo.json";
 import areaMap from "./assets/area_map.json";
-import shampooImg from "./assets/shampoo.svg";
+import shampooImg from "./assets/detergent.svg";
+
+import phoneIcon from "./assets/icons/phone.svg";
+import emailIcon from "./assets/icons/email.svg";
+import mapIcon from "./assets/icons/map.svg";
 
 function App() {
   const navMenu = [
@@ -41,7 +38,7 @@ function App() {
   return (
     <>
       <main className="desktop_web">
-        <nav className="navbar">
+        <nav style={{ zIndex: 50 }} className="navbar">
           <img src={logo} style={{ height: "50px" }} />
 
           <ul className="nav_link_list">
@@ -122,7 +119,7 @@ function App() {
                   transition={{ duration: 0.5 }}
                   className="mainHeading"
                 >
-                  <p styke={{ fontSize: "3em" }}>
+                  <p style={{ fontSize: "1.25em" }}>
                     <strong>EXPERIENCE </strong>
                     EFFORTLESS AND <br />
                     PRISTINE CLEAN CLOTHES WITH
@@ -158,17 +155,29 @@ function App() {
               <div
                 style={{
                   width: "100%",
-                  display: "grid",
-                  placeItems: "center",
+                  position: "relative",
                 }}
               >
-                <img style={{ paddingLeft: "50px" }} src={ladyWithCloths1} />
+                <img
+                  style={{
+                    left: 0,
+                    bottom: -80,
+                    position: "absolute",
+                    padding: "0 50px",
+                    zIndex: 19,
+                  }}
+                  src={ladyWithCloths1}
+                />
               </div>
-              <div>
-                <h2>About Our Effortless Laundry Services</h2>
+              <div style={{ marginTop: "50px" }}>
+                <h2 style={{ lineHeight: "1em" }}>
+                  About Our Effortless Laundry Services
+                </h2>
+                <br />
                 <h3> Welcome to Urban Laundry!</h3>
                 <br />
-                <p>
+
+                <p style={{ paddingRight: "40px" }}>
                   Urban Laundry was founded with the goal of providing a
                   hassle-free laundry experience to the people of the city. We
                   understand that evervone is busy in their own lives and
@@ -199,6 +208,7 @@ function App() {
                 backgroundColor: "black",
                 fontSize: "2em",
                 letterSpacing: "0.6em",
+                zIndex: 20,
               }}
             >
               EXPERIENCE THE ULTIMATE CLEAN
@@ -239,16 +249,7 @@ function App() {
                   <div>WOOL-SAFE MACHINERY GUARANTEED</div>
                 </div>
                 <div className="card">
-                  <img
-                    src={shampooImg}
-                    style={{
-                      backgroundColor: "white",
-                      height: "25vh",
-                      justifyContent: "center",
-                      borderRadius: "10px",
-                      padding: "10px",
-                    }}
-                  />
+                  <img src={shampooImg} style={{ justifyContent: "center" }} />
                   <div> GERMAN EXPERTISE FOR AN ECO-FRIENDLY CLEAN</div>
                 </div>
 
@@ -524,7 +525,7 @@ function App() {
                 <div> with our wash and fold option </div>
                 <button
                   style={{
-                    backgroundColor: "green",
+                    // backgroundColor: "green",
                     marginTop: "20px",
                     borderRadius: "30px",
                   }}
@@ -671,7 +672,7 @@ function App() {
 
                 <button
                   style={{
-                    backgroundColor: "green",
+                    // backgroundColor: "green",
                     marginTop: "20px",
                     borderRadius: "30px",
                   }}
@@ -712,7 +713,7 @@ function App() {
                 <div>
                   <button
                     style={{
-                      backgroundColor: "green",
+                      // backgroundColor: "green",
                       marginTop: "20px",
                       borderRadius: "30px",
                     }}
@@ -750,18 +751,75 @@ function App() {
                   padding: "50px",
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "space-between",
+                  justifyContent: "space-around",
                   textAlign: "start",
                 }}
               >
                 <h2> LOCATE US</h2>
                 <div>
-                  <p> +91 6362 591 993 </p>
-                  <p> info.theurbanlaundryblr@gmail.com</p>
-                  <p>
-                    # 17/388/17, 19th H Road,Ist N Block, Rajajinagar,
-                    Bengaluru, Karnataka 560010
-                  </p>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "10px",
+                      justifyContent: "start",
+                      alignItems: "center",
+                      padding: "10px 0",
+                    }}
+                  >
+                    <img
+                      style={{
+                        width: "40px",
+                      }}
+                      src={phoneIcon}
+                      alt=""
+                      srcset=""
+                    />
+                    <a href="tel:+916362591993">+91 6362 591 993 </a>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "10px",
+                      justifyContent: "start",
+                      alignItems: "center",
+                      padding: "10px 0",
+                    }}
+                  >
+                    <img
+                      style={{
+                        width: "40px",
+                      }}
+                      src={emailIcon}
+                      alt=""
+                      srcset=""
+                    />
+                    <a href="mailto:info.theurbanlaundryblr@gmail.com">
+                      info.theurbanlaundryblr@gmail.com
+                    </a>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "10px",
+                      justifyContent: "start",
+                      alignItems: "center",
+                      padding: "10px 0",
+                    }}
+                  >
+                    <img
+                      style={{
+                        width: "40px",
+                      }}
+                      src={mapIcon}
+                      alt=""
+                      srcset=""
+                    />
+                    <a href="https://www.google.com/maps/place/The+Urban+Laundry/@13.003984,77.5499778,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae3d954a7b90c3:0x4551aba1ac6084c3!8m2!3d13.0039788!4d77.5521665">
+                      {" "}
+                      # 17/388/17, 19th H Road,Ist N Block, Rajajinagar,
+                      Bengaluru, Karnataka 560010
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -783,15 +841,17 @@ function App() {
                   animationData={areaMap}
                   loop={true}
                 />
-                <button
-                  style={{
-                    backgroundColor: "green",
-                    marginTop: "20px",
-                    borderRadius: "30px",
-                  }}
-                >
-                  map
-                </button>
+                <a href="https://www.google.com/maps/place/The+Urban+Laundry/@13.003984,77.5499778,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae3d954a7b90c3:0x4551aba1ac6084c3!8m2!3d13.0039788!4d77.5521665">
+                  <button
+                    style={{
+                      // backgroundColor: "green",
+                      marginTop: "20px",
+                      borderRadius: "30px",
+                    }}
+                  >
+                    map
+                  </button>
+                </a>
               </div>
             </section>
           </div>

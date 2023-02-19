@@ -73,9 +73,19 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background: linear-gradient(to bottom, #c9b90e 10%, #687d31 85%, #688A00 100%);
+  border-color: #000000;
+  border-width: 2px;
+  color: #242424;
+  font-weight: bold;
   cursor: pointer;
   transition: border-color 0.25s;
+}
+
+a {
+  all: unset;
+  color: white;
+  cursor: pointer;
 }
 
 button:hover {
