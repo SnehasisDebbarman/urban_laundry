@@ -824,38 +824,43 @@ export default function MobileWeb() {
                     display: "flex",
                     gap: "10px",
                     justifyContent: "start",
-                    alignItems: "center",
+                    alignItems: "start",
                     padding: "10px 0",
                   }}
                 >
                   <img
                     style={{
-                      width: "40px",
+                      width: "30px",
                     }}
                     src={phoneIcon}
                     alt=""
                     srcset=""
                   />
-                  <a href="tel:+916362591993">+91 6362 591 993 </a>
+                  <a style={{ fontSize: "0.9em" }} href="tel:+916362591993">
+                    +91 6362 591 993{" "}
+                  </a>
                 </div>
                 <div
                   style={{
                     display: "flex",
                     gap: "10px",
                     justifyContent: "start",
-                    alignItems: "center",
+                    alignItems: "start",
                     padding: "10px 0",
                   }}
                 >
                   <img
                     style={{
-                      width: "40px",
+                      width: "30px",
                     }}
                     src={emailIcon}
                     alt=""
                     srcset=""
                   />
-                  <a href="mailto:info.theurbanlaundryblr@gmail.com">
+                  <a
+                    style={{ fontSize: "0.9em" }}
+                    href="mailto:info.theurbanlaundryblr@gmail.com"
+                  >
                     info.theurbanlaundryblr@gmail.com
                   </a>
                 </div>
@@ -864,19 +869,22 @@ export default function MobileWeb() {
                     display: "flex",
                     gap: "10px",
                     justifyContent: "start",
-                    alignItems: "center",
+                    alignItems: "start",
                     padding: "10px 0",
                   }}
                 >
                   <img
                     style={{
-                      width: "40px",
+                      width: "30px",
                     }}
                     src={mapIcon}
                     alt=""
                     srcset=""
                   />
-                  <a href="https://www.google.com/maps/place/The+Urban+Laundry/@13.003984,77.5499778,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae3d954a7b90c3:0x4551aba1ac6084c3!8m2!3d13.0039788!4d77.5521665">
+                  <a
+                    style={{ fontSize: "0.9em" }}
+                    href="https://www.google.com/maps/place/The+Urban+Laundry/@13.003984,77.5499778,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae3d954a7b90c3:0x4551aba1ac6084c3!8m2!3d13.0039788!4d77.5521665"
+                  >
                     {" "}
                     # 17/388/17, 19th H Road,Ist N Block, Rajajinagar,
                     Bengaluru, Karnataka 560010
