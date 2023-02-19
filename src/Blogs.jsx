@@ -15,40 +15,43 @@ export default function Blogs() {
     >
       <div className="blog_first">
         <div className="blog_first_content">
-          <h2 style={{ fontSize: "4em", textAlign: "start" }}>BLOGS</h2>
-          <h4 style={{ fontSize: "2.4em", textAlign: "start" }}>
+          <h2 className="blogs_heading">BLOGS</h2>
+          <h4 className="blogs_subheading">
             {" "}
             6 things to keep in mind before giving to laundry
           </h4>
-          <p style={{ textAlign: "start" }}>
-            "Are you tired of picking up your clothes from the laundry only to
-            find that they've shrunk, discolored, or been damaged in some other
-            way? If so, you're not alone. Many people have had similar
-            experiences, and it's often due to a lack of knowledge about what to
-            do before giving their clothes to the laundry. In this blog, we'll
-            share six things you should keep in mind before giving your clothes
-            to the laundry to help ensure that they come back in the best
-            possible condition.
-          </p>
-          <br /> <br />
-          <strong> 1.) Read the Care Labels</strong>
-          <p>
-            {" "}
-            The care labels on your clothes are there for a reason. They provide
-            important information about how to properly care for your clothes
-            and help ensure that they don't get damaged in the laundry. Before
-            giving your clothes to the laundry, take a few minutes to read the
-            care labels and follow the instructions carefully.
-          </p>
-          <br />
-          <strong> 2.) Sort Your Clothes</strong>
-          <p>
-            {" "}
-            Sorting your clothes by color and type of fabric is one of the most
-            important things you can do before giving them to the laundry. This
-            will help prevent dye transfer and protect delicate fabrics from
-            getting damaged.
-          </p>
+          <div className="blog_content">
+            <p style={{ textAlign: "start" }}>
+              "Are you tired of picking up your clothes from the laundry only to
+              find that they've shrunk, discolored, or been damaged in some
+              other way? If so, you're not alone. Many people have had similar
+              experiences, and it's often due to a lack of knowledge about what
+              to do before giving their clothes to the laundry. In this blog,
+              we'll share six things you should keep in mind before giving your
+              clothes to the laundry to help ensure that they come back in the
+              best possible condition.
+            </p>
+            <br /> <br />
+            <strong> 1.) Read the Care Labels</strong>
+            <p>
+              {" "}
+              The care labels on your clothes are there for a reason. They
+              provide important information about how to properly care for your
+              clothes and help ensure that they don't get damaged in the
+              laundry. Before giving your clothes to the laundry, take a few
+              minutes to read the care labels and follow the instructions
+              carefully.
+            </p>
+            <br />
+            <strong> 2.) Sort Your Clothes</strong>
+            <p>
+              {" "}
+              Sorting your clothes by color and type of fabric is one of the
+              most important things you can do before giving them to the
+              laundry. This will help prevent dye transfer and protect delicate
+              fabrics from getting damaged.
+            </p>
+          </div>
         </div>
         <div className="image_container">
           <img src={lady_with_cloths} alt="" srcset="" />
@@ -59,7 +62,7 @@ export default function Blogs() {
           {" "}
           <img src={lady_with_cloths_2} alt="" srcset="" />
         </div>
-        <div className="blog_first_content">
+        <div className="blog_first_content blog_content">
           <strong> 3.) Check for Stains</strong>
           <p>
             {" "}

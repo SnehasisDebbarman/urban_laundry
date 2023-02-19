@@ -11,7 +11,7 @@
 .card_mobile {
     margin-top: 0;
     margin: 30px;
-    height: 35vh;
+    /* height: 35vh; */
     border-radius: 5px;
     display: flex;
     justify-content: center;

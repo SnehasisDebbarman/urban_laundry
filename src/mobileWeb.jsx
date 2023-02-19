@@ -12,11 +12,11 @@ import ladyWithCloths4 from "./assets/lady_with_cloths_4.png";
 import woolmark from "./assets/woolmark.png";
 import hygenicStamp from "./assets/hygenic_stamp.png";
 import expert from "./assets/expert.png";
-import ten_step from "./assets/ten_step_mobile.png";
+import ten_step from "./assets/icons/123.png";
 import thinking_man from "./assets/thinking_man.png";
 import billboard from "./assets/billboard.png";
 import handshake from "./assets/handshake.png";
-import manWave from "./assets/man_wave_3_mobile.png";
+import manWave from "./assets/icons/man.png";
 
 import Lottie from "lottie-react";
 import areaMap from "./assets/area_map.json";
@@ -158,13 +158,14 @@ export default function MobileWeb() {
         className="mobile_nav"
         style={{
           width: "100vw",
-          padding: "20px 40px",
+          padding: "20px 20px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           backgroundColor: "rgba(0,0,0,0.7)",
           position: "fixed",
           top: 0,
+          zIndex: 100,
         }}
       >
         <img src={logo} style={{ height: "50px" }} />
@@ -212,6 +213,7 @@ export default function MobileWeb() {
             <img
               style={{
                 alignSelf: "center",
+                padding: "20px 0",
               }}
               src={manWave}
               alt="man with Urban Laundry washing Machine"
@@ -228,17 +230,33 @@ export default function MobileWeb() {
             id="Services_mobile"
             className="about_us_mobile"
             style={{
-              padding: "30px",
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
+              alignItems: "start",
             }}
           >
-            <h2 style={{ fontSize: "2.5em" }}>ABOUT US</h2>
-            <p className="sinhala_font" style={{ fontSize: "1.5em" }}>
+            <h2
+              style={{
+                fontSize: "2.5em",
+                textAlign: "start",
+                padding: "30px 30px 10px 30px",
+              }}
+            >
+              ABOUT US
+            </h2>
+            <p
+              className="sinhala_font"
+              style={{ fontSize: "1.5em", padding: " 0 30px" }}
+            >
               Welcome to Urban Laundry!
             </p>
-            <p style={{ fontSize: "0.7em", textAlign: "start" }}>
+            <p
+              style={{
+                fontSize: "0.7em",
+                textAlign: "start",
+                padding: "0 30px",
+              }}
+            >
               Urban Laundry was founded with the goal of providing a hassle-free
               laundry experience to the people of the city. We understand that
               everyone is busy in their own lives and sometimes they don't have
@@ -262,6 +280,7 @@ export default function MobileWeb() {
                 style={{
                   alignSelf: "center",
                   height: "50vh",
+                  padding: "0 30px",
                 }}
                 src={ladyWithCloths1}
                 alt="lady with laundry"
@@ -315,7 +334,9 @@ export default function MobileWeb() {
                       justifyContent: "center",
                     }}
                   />
-                  <div>WOOL-SAFE MACHINERY GUARANTEED</div>
+                  <div style={{ fontSize: "0.6em" }}>
+                    WOOL-SAFE MACHINERY GUARANTEED
+                  </div>
                 </div>
                 <div className="card_mobile">
                   <img
@@ -324,7 +345,9 @@ export default function MobileWeb() {
                       aspectRatio: "1/1",
                     }}
                   />
-                  <div> GERMAN EXPERTISE FOR AN ECO-FRIENDLY CLEAN</div>
+                  <div style={{ fontSize: "0.6em" }}>
+                    GERMAN EXPERTISE FOR AN ECO-FRIENDLY CLEAN
+                  </div>
                 </div>
 
                 <div className="card_mobile">
@@ -335,7 +358,9 @@ export default function MobileWeb() {
                       justifyContent: "center",
                     }}
                   />
-                  <div>HOHENSTEIN APPROVED EQUIPMENT</div>
+                  <div style={{ fontSize: "0.6em" }}>
+                    HOHENSTEIN APPROVED EQUIPMENT
+                  </div>
                 </div>
                 <div className="card_mobile">
                   <img
@@ -345,7 +370,9 @@ export default function MobileWeb() {
                       justifyContent: "center",
                     }}
                   />
-                  <div>A TEAM OF EXPERIENCED PROFESSIONALS</div>
+                  <div style={{ fontSize: "0.6em" }}>
+                    A TEAM OF EXPERIENCED PROFESSIONALS
+                  </div>
                 </div>
               </div>
             </div>
@@ -421,7 +448,7 @@ export default function MobileWeb() {
           <section id="Services_mobile">
             <div
               style={{
-                padding: "50px",
+                padding: "50px 30px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -477,11 +504,11 @@ export default function MobileWeb() {
               style={{ height: "5px", backgroundColor: "rgb(158, 31, 255)" }}
             ></div>
           </section>
-          <section style={{ padding: "50px" }}>
+          <section style={{ padding: "50px 30px" }}>
             <h2
               style={{
                 textAlign: "start",
-                fontSize: "3em",
+                fontSize: "1.7em",
                 fontWeight: "600",
               }}
             >
@@ -493,7 +520,7 @@ export default function MobileWeb() {
                 textAlign: "start",
               }}
             >
-              <h3 style={{ fontSize: "2em", marginBottom: "20px" }}>
+              <h3 style={{ fontSize: "1.3em", marginBottom: "20px" }}>
                 we offer top-notch cleaning services to keep your belongings
                 looking their best.{" "}
               </h3>
@@ -630,16 +657,17 @@ export default function MobileWeb() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
-                padding: "60px 50px",
+                padding: "60px 30px",
               }}
             >
               <div className="gradient_text">
                 <p
                   style={{
                     color: "yellow",
-                    fontSize: "2em",
+                    fontSize: "1.5em",
                     textAlign: "start",
                     fontWeight: "700",
+                    lineHeight: "1em",
                   }}
                 >
                   GET
@@ -658,9 +686,9 @@ export default function MobileWeb() {
               </div>
               <h3
                 style={{
-                  fontSize: "1.6em",
+                  fontSize: "1.2em",
                   marginBottom: "30px",
-                  marginTop: "30px",
+                  marginTop: "20px",
                 }}
               >
                 {" "}
@@ -691,7 +719,7 @@ export default function MobileWeb() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
-                padding: "60px 70px",
+                padding: "60px 30px",
               }}
             >
               <div className="gradient_text">
@@ -747,6 +775,8 @@ export default function MobileWeb() {
 
               <button
                 style={{
+                  fontSize: "0.8em",
+
                   // backgroundColor: "green",
                   marginTop: "20px",
                   borderRadius: "30px",
@@ -771,19 +801,18 @@ export default function MobileWeb() {
               style={{
                 width: "100vw",
                 position: "absolute",
-                paddingTop: "70px",
+                paddingTop: "20px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                zIndex: 3,
               }}
             >
               <div>
                 <button
                   style={{
-                    // backgroundColor: "green",
-                    marginTop: "5px",
-                    borderRadius: "15px",
-                    fontSize: "0.8em",
+                    borderRadius: "20px",
+                    fontSize: "0.6em",
                   }}
                 >
                   JOIN US
