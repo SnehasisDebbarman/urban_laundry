@@ -27,14 +27,6 @@ import mapIcon from "./assets/icons/map.svg";
 import landingText from "./assets/icons/landing_page_text.png";
 
 function App() {
-  const navMenu = [
-    "Home",
-    "Services",
-    "Pricing",
-    "Get Franchises",
-    "Blogs",
-    "Locate us",
-  ];
   const [blogVisible, setBlogVisible] = useState(false);
 
   return (
@@ -90,10 +82,9 @@ function App() {
               onClick={() => {
                 setBlogVisible(false);
               }}
-              href="#Locate Us"
+              href="#Locate_Us"
             >
-              {" "}
-              <li style={{ color: "white" }}>Locate us</li>
+              <li style={{ color: "white" }}>Locate Us</li>
             </a>
           </ul>
           {/* {navMenu.map((it) => (
@@ -733,7 +724,7 @@ function App() {
               <img src={handshake} className="join_us_div" />
             </section>
             <section
-              id="Locate us"
+              id="Locate_Us"
               style={{
                 paddingTop: "5em",
                 display: "grid",
