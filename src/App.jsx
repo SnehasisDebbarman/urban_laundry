@@ -349,7 +349,7 @@ function App() {
                   padding: "50px",
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "center",
+                  justifyContent: "flex-start",
                   alignItems: "flex-start",
                 }}
               >
@@ -518,16 +518,20 @@ function App() {
                   AFFORDABLE
                 </p>
                 <div>luxury at its finest - enjoy top-notch</div>
-                <div>laundry services for</div>
-                <div>only</div>
-                <h2>80 Rupees</h2>
-                per KG
-                <div> with our wash and fold option </div>
+                <div>laundry services for only</div>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <h2>₹ 80</h2>
+                  <p style={{ paddingTop: "1.2em", paddingLeft: "0.7em" }}>
+                    {" "}
+                    per KG
+                  </p>
+                </div>
+                <p> with our wash and fold option </p>
                 <button
                   style={{
                     // backgroundColor: "green",
-                    marginTop: "20px",
-                    borderRadius: "30px",
+                    marginTop: "40px",
+                    borderRadius: "35px",
                   }}
                 >
                   SCHEDULE PICK UP

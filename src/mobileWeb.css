@@ -33,10 +33,42 @@
 
 
 .menu-container {
-    background-image: radial-gradient(circle 610px at 5.2% 51.6%, rgb(78, 80, 150) 0%, rgba(7, 3, 53, 1) 97.5%);
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* border-radius: 10px; */
     box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.2);
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(13.5px);
+    animation: nav_anim 400ms linear forwards;
 }
+
+.menu-container-hidden {
+    height: 0vh;
+    animation: nav_anim 400ms linear backwards;
+}
+
+.menu-container-text {
+    display: block;
+    width: 100vw;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 400;
+    /* border: 1px solid red; */
+    text-align: start;
+    padding-left: 20px;
+    animation: nav_item_anim 400ms linear forwards;
+}
+
+.menu-container-text-hidden {
+    display: hidden;
+    visibility: hidden;
+    font-size: 0px;
+}
+
+
 
 .washing_machine_backgound_mobile {
     padding: 50px;
@@ -57,3 +89,25 @@
 }
 
 .experience_mobile {}
+
+@keyframes nav_anim {
+    0% {
+        height: 0vh;
+    }
+
+    100% {
+        height: 100vh;
+    }
+
+}
+
+@keyframes nav_item_anim {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 50px;
+    }
+
+}

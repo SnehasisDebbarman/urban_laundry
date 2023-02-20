@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "./assets/LOGO.png";
 import { motion } from "framer-motion";
 import Blogs from "./Blogs";
-import ladyWithCloths1 from "./assets/lady_with_cloths_1.png";
+import ladyWithCloths1 from "./assets/icons/women.png";
 import ladyWithCloths4 from "./assets/lady_with_cloths_4.png";
 import woolmark from "./assets/woolmark.png";
 import hygenicStamp from "./assets/hygenic_stamp.png";
@@ -27,6 +27,9 @@ import emailIcon from "./assets/icons/email.svg";
 import mapIcon from "./assets/icons/map.svg";
 
 import landingText from "./assets/icons/landing_page_text.png";
+
+import { GrClose } from "react-icons/gr";
+import { MdOutlineClose } from "react-icons/md";
 
 export default function MobileWeb() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -59,30 +62,20 @@ export default function MobileWeb() {
   }
   const Menu = () => {
     return (
-      <motion.div
-        initial={{ opacity: 0, x: -200 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
+      <div
         style={{
           top: 85,
-          left: 0,
           position: "fixed",
-          height: "100vh",
-          width: "100vw",
+          // minHeight: "100vh",
+          // width: "100vw",
           display: "flex",
           justifyContent: "center",
+          zIndex: 101,
           // alignItems: "center",
         }}
       >
         <div
-          className="menu-container"
-          style={{
-            width: "100vw",
-            height: "max-content",
-            padding: "20px",
-            display: "flex",
-            justifyContent: "center",
-          }}
+          className={menuVisible ? "menu-container" : "menu-container-hidden"}
         >
           <ul>
             <a
@@ -92,7 +85,15 @@ export default function MobileWeb() {
               }}
               href="#Home_mobile"
             >
-              <li>Home</li>
+              <li
+                className={
+                  menuVisible
+                    ? "menu-container-text"
+                    : "menu-container-text-hidden"
+                }
+              >
+                Home
+              </li>
             </a>
             <a
               onClick={() => {
@@ -101,7 +102,15 @@ export default function MobileWeb() {
               }}
               href="#Services_mobile"
             >
-              <li>Services</li>
+              <li
+                className={
+                  menuVisible
+                    ? "menu-container-text"
+                    : "menu-container-text-hidden"
+                }
+              >
+                Services
+              </li>
             </a>
 
             <a
@@ -112,7 +121,15 @@ export default function MobileWeb() {
               href="#Pricing_mobile"
             >
               {" "}
-              <li>Pricing</li>
+              <li
+                className={
+                  menuVisible
+                    ? "menu-container-text"
+                    : "menu-container-text-hidden"
+                }
+              >
+                Pricing
+              </li>
             </a>
             <a
               onClick={() => {
@@ -121,7 +138,15 @@ export default function MobileWeb() {
               }}
               href="#Get_franchises_mobile"
             >
-              <li>Get Franchises</li>
+              <li
+                className={
+                  menuVisible
+                    ? "menu-container-text"
+                    : "menu-container-text-hidden"
+                }
+              >
+                Get Franchises
+              </li>
             </a>
             <a
               onClick={() => {
@@ -130,7 +155,15 @@ export default function MobileWeb() {
               }}
               href="#Blogs_mobile"
             >
-              <li>Blogs</li>
+              <li
+                className={
+                  menuVisible
+                    ? "menu-container-text"
+                    : "menu-container-text-hidden"
+                }
+              >
+                Blogs
+              </li>
             </a>
             <a
               onClick={() => {
@@ -140,11 +173,19 @@ export default function MobileWeb() {
               href="#Locate_us_mobile"
             >
               {" "}
-              <li>Locate us</li>
+              <li
+                className={
+                  menuVisible
+                    ? "menu-container-text"
+                    : "menu-container-text-hidden"
+                }
+              >
+                Locate us
+              </li>
             </a>
           </ul>
         </div>
-      </motion.div>
+      </div>
     );
   };
   return (
@@ -169,13 +210,24 @@ export default function MobileWeb() {
         }}
       >
         <img src={logo} style={{ height: "50px" }} />
-        <GiHamburgerMenu
-          onClick={() => {
-            setMenuVisible(!menuVisible);
-          }}
-        />
+        {menuVisible ? (
+          <MdOutlineClose
+            color="white"
+            size={30}
+            onClick={() => {
+              setMenuVisible(!menuVisible);
+            }}
+          />
+        ) : (
+          <GiHamburgerMenu
+            size={30}
+            onClick={() => {
+              setMenuVisible(!menuVisible);
+            }}
+          />
+        )}
       </nav>
-      {menuVisible ? <Menu /> : null}
+      <Menu />
       {blogVisible ? (
         <Blogs />
       ) : (
@@ -275,12 +327,15 @@ export default function MobileWeb() {
               <br />
               The Urban Laundry Team.'
             </p>
-            <div>
+            <div
+              style={{
+                alignSelf: "center",
+              }}
+            >
               <img
                 style={{
-                  alignSelf: "center",
                   height: "50vh",
-                  padding: "0 30px",
+                  alignSelf: "flex-end",
                 }}
                 src={ladyWithCloths1}
                 alt="lady with laundry"
@@ -847,7 +902,7 @@ export default function MobileWeb() {
               }}
             >
               <div>
-                <h2> LOCATE US</h2>
+                <h2 style={{ fontSize: "2em" }}> LOCATE US</h2>
                 <div
                   style={{
                     display: "flex",
