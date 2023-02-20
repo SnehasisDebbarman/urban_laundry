@@ -24,6 +24,8 @@ import phoneIcon from "./assets/icons/phone.svg";
 import emailIcon from "./assets/icons/email.svg";
 import mapIcon from "./assets/icons/map.svg";
 
+import landingText from "./assets/icons/landing_page_text.png";
+
 function App() {
   const navMenu = [
     "Home",
@@ -119,29 +121,19 @@ function App() {
                   transition={{ duration: 0.5 }}
                   className="mainHeading"
                 >
-                  <p style={{ fontSize: "1.25em" }}>
-                    <strong>EXPERIENCE </strong>
-                    EFFORTLESS AND <br />
-                    PRISTINE CLEAN CLOTHES WITH
-                  </p>
-                  <div
+                  <img
+                    src={landingText}
                     style={{
-                      width: "max-content",
-                      borderBottom: "2px solid yellow",
+                      alignSelf: "center",
+                      width: "100%",
                     }}
-                  >
-                    <h1 id="h1">URBAN LAUNDRY</h1>
-                  </div>
+                    alt="EXPERIENCE EFFORTLESS AND PRISTINE CLEAN CLOTHES WITH URBAN LAUNDRY"
+                    srcset=""
+                  />
                 </motion.div>
-                <div className="sub_heading">
-                  The one-stop solution for Dry cleaning, Laundry, and Steam
-                  iron services
-                </div>
               </div>
               <div className="image-container">
                 <img className="image_man_washingMachine" src={wash} />
-
-                {/* <Lottie animationData={laundry} loop={true} /> */}
               </div>
             </section>
             <img
@@ -161,7 +153,7 @@ function App() {
                 <img
                   style={{
                     left: 0,
-                    bottom: -80,
+                    bottom: -100,
                     position: "absolute",
                     padding: "0 50px",
                     zIndex: 19,
@@ -170,8 +162,9 @@ function App() {
                 />
               </div>
               <div style={{ marginTop: "50px" }}>
-                <h2 style={{ lineHeight: "1em" }}>
-                  About Our Effortless Laundry Services
+                <h2 style={{ fontSize: "2.7em", lineHeight: "1.2em" }}>
+                  About Our Effortless
+                  <br /> Laundry Services
                 </h2>
                 <br />
                 <h3> Welcome to Urban Laundry!</h3>
