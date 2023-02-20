@@ -389,7 +389,7 @@ export default function MobileWeb() {
                       justifyContent: "center",
                     }}
                   />
-                  <div style={{ fontSize: "0.6em" }}>
+                  <div style={{ fontSize: "0.55em" }}>
                     WOOL-SAFE MACHINERY GUARANTEED
                   </div>
                 </div>
@@ -400,7 +400,7 @@ export default function MobileWeb() {
                       aspectRatio: "1/1",
                     }}
                   />
-                  <div style={{ fontSize: "0.6em" }}>
+                  <div style={{ fontSize: "0.55em" }}>
                     GERMAN EXPERTISE FOR AN ECO-FRIENDLY CLEAN
                   </div>
                 </div>
@@ -413,7 +413,7 @@ export default function MobileWeb() {
                       justifyContent: "center",
                     }}
                   />
-                  <div style={{ fontSize: "0.6em" }}>
+                  <div style={{ fontSize: "0.55em" }}>
                     HOHENSTEIN APPROVED EQUIPMENT
                   </div>
                 </div>
@@ -425,7 +425,7 @@ export default function MobileWeb() {
                       justifyContent: "center",
                     }}
                   />
-                  <div style={{ fontSize: "0.6em" }}>
+                  <div style={{ fontSize: "0.55em" }}>
                     A TEAM OF EXPERIENCED PROFESSIONALS
                   </div>
                 </div>
