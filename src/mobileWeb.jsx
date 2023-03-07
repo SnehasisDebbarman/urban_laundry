@@ -300,7 +300,7 @@ export default function MobileWeb() {
               className="sinhala_font"
               style={{ fontSize: "1.5em", padding: " 0 30px" }}
             >
-              Welcome to Urban Laundry!
+              Our Story!
             </p>
             <p
               style={{

@@ -158,7 +158,7 @@ function App() {
                   <br /> Laundry Services
                 </h2>
                 <br />
-                <h3> Welcome to Urban Laundry!</h3>
+                <h3> Our Story!</h3>
                 <br />
 
                 <p style={{ paddingRight: "40px", fontSize: "0.7rem" }}>
