@@ -309,7 +309,37 @@ export default function MobileWeb() {
                 padding: "0 30px",
               }}
             >
-              Urban Laundry was founded with the goal of providing a hassle-free
+              Our founder's wife had a frustrating experience with a local dry
+              cleaning store, where her saree was held for almost 10 days and
+              the timeline was extended by another week. This sparked a fire
+              within our founder, a man of perfection and former CEO of Nazran
+              cements, Saudi, to research and dive deep into the laundry and dry
+              cleaning industry. His meticulous research revealed that less than
+              1% of dry cleaning machinery was being utilized, with harsh
+              chemicals not approved for laundry and dry cleaning use. Further
+              investigation showed that many dry cleaning shops lacked proper
+              processes and quality chemicals.
+              <br />
+              <br />
+              Determined to bring change to the industry, our founder shared his
+              vision with his family and launched The Urban Laundry in
+              Rajajinagar/Bengaluru. He implemented a process that included
+              quality checks at every step and optimal machinery utilization by
+              quickly training a workforce without prior laundry experience. Our
+              customers quickly fell in love with our speed and quality, and we
+              became the industry's first to offer laundry and dry cleaning in
+              just two days for no extra charge, setting us apart from other
+              players in the market.
+              <br />
+              <br />
+              Our passion for quality and speed quickly gained attention across
+              Bangalore, with customers coming from all areas of the city. Many
+              were so impressed that they requested we expand to nearby areas to
+              help their friends and family experience our top-notch services.
+              Today, we continue to be driven by our mission to revolutionize
+              the laundry industry by offering superior processes and great
+              quality with lightning speed.
+              {/* Urban Laundry was founded with the goal of providing a hassle-free
               laundry experience to the people of the city. We understand that
               everyone is busy in their own lives and sometimes they don't have
               the time to do their laundry. This is where we come in. Our
@@ -322,7 +352,7 @@ export default function MobileWeb() {
               service, or a weekly laundry pick-up and delivery service, we have
               got you covered. <br /> So why wait? Book your laundry or dry
               cleaning service today and experience the best in quality and
-              convenience. We look forward to serving you soon!
+              convenience. We look forward to serving you soon! */}
               <br /> Sincerely,
               <br />
               The Urban Laundry Team.'
