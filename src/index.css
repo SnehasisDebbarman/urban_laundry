@@ -54,14 +54,14 @@ h1 {
   line-height: 1em;
 }
 
-h2 {
+.h2 {
   font-size: 3em;
   background: linear-gradient(to bottom, #ffe329 20%, #cef66a 50%, #96ba29 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-h3 {
+.h3 {
   font-size: 2em;
   font-family: 'Abhaya Libre', serif;
 }
