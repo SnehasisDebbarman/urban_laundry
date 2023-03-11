@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/LOGO.png";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   const [NavVisible, setNavVisible] = useState(false);
+  const [NavActive, setNavActive] = useState(
+    window.location.pathname.includes("blog") ? "blog" : "home"
+  );
+
+  useEffect(() => {
+    console.log(window.location.hash);
+  }, [NavActive]);
+
   return (
-    <nav className="sticky [background-color:rgba(0,0,0,0.6)] backdrop-blur-sm px-2 sm:px-4 py-2.5 w-screen z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className="z-30 sticky [background-color:rgba(0,0,0,0.8)] backdrop-blur-sm px-2 sm:px-4 py-2.5 w-screen top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="container flex items-center justify-between mx-auto">
-        <a href="https://flowbite.com/" className="flex items-center">
-          <img src={logo} style={{ height: "50px" }} alt={"urban laundry"} />
-        </a>
+        <div className="flex items-center">
+          <Link onClick={() => setNavActive("home")} to={"/"}>
+            <img src={logo} style={{ height: "50px" }} alt={"urban laundry"} />
+          </Link>
+        </div>
         <div className="flex md:order-md2">
           <button
             onClick={() => {
@@ -44,52 +55,108 @@ export default function Navbar() {
         >
           <ul className="flex flex-col p-4 mt-4   rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
             <li>
-              <a
-                href="/"
-                className="block py-2 pl-3 pr-4 rounded md:p-0 text-white"
+              <Link
+                onClick={() => setNavActive("home")}
+                to={"/"}
+                className="block py-2 pl-3 pr-4  rounded"
                 aria-current="page"
               >
-                Home
-              </a>
+                <span
+                  className={
+                    NavActive.match("home")
+                      ? "text-white border-b"
+                      : "text-slate-500"
+                  }
+                >
+                  Home
+                </span>
+              </Link>
             </li>
             <li>
               <a
-                href="/#Services"
-                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                onClick={() => setNavActive("Services")}
+                href="#Services"
+                className="block py-2 pl-3 pr-4  rounded "
               >
-                Services
+                <span
+                  className={
+                    NavActive.match("Services")
+                      ? "text-white border-b"
+                      : "text-slate-500"
+                  }
+                >
+                  {" "}
+                  Services
+                </span>
               </a>
             </li>
             <li>
               <a
+                onClick={() => setNavActive("Pricing")}
                 href="/#Pricing"
-                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 pl-3 pr-4 rounded "
               >
-                Pricing
+                <span
+                  className={
+                    NavActive.match("Pricing")
+                      ? "text-white border-b"
+                      : "text-slate-500"
+                  }
+                >
+                  {" "}
+                  Pricing
+                </span>
               </a>
             </li>
             <li>
               <a
+                onClick={() => setNavActive("Get Franchises")}
                 href="/#Get Franchises"
-                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 pl-3 pr-4 "
               >
-                Get Franchises
+                <span
+                  className={
+                    NavActive.match("Get Franchises")
+                      ? "text-white border-b"
+                      : "text-slate-500"
+                  }
+                >
+                  Get Franchises
+                </span>
               </a>
             </li>
             <li>
-              <a
-                href="/blog"
-                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              <Link
+                onClick={() => setNavActive("blog")}
+                to="/blog"
+                className="block py-2 pl-3 pr-4 "
               >
-                Blog
-              </a>
+                <span
+                  className={
+                    window.location.pathname.includes("blog")
+                      ? "text-white border-b"
+                      : "text-slate-500"
+                  }
+                >
+                  Blog
+                </span>
+              </Link>
             </li>
             <li>
               <a
+                onClick={() => setNavActive("Locate")}
                 href="/#Locate us"
-                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 pl-3 pr-4 "
               >
-                Locate Us
+                <span
+                  className={
+                    NavActive.match("Locate")
+                      ? "text-white border-b"
+                      : "text-slate-500"
+                  }
+                >
+                  Locate Us
+                </span>
               </a>
             </li>
           </ul>

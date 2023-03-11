@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import lady_with_cloths from "./assets/lady_with_cloths_2.png";
 import lady_with_cloths_2 from "./assets/lady_with_cloths_3.png";
 import "./Blogs.css";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import moment from "moment";
+import { Link } from "react-router-dom";
 
 export default function Blogs() {
+  const [blogs, setBlogs] = useState([]);
+  const fetchBlog = async () => {
+    const mediumURL =
+      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mehulkothari05";
+    // "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nirmaldev81";
+
+    const response = await fetch(mediumURL, {
+      headers: {
+        "content-type": "application/text",
+      },
+    });
+    const data = await response.json();
+    // const data = await response.text();
+
+    // var xml = new XMLParser().parseFromString(data);
+    // console.log(xml);
+
+    console.log(data);
+    setBlogs(data?.items);
+  };
+  useEffect(() => {
+    fetchBlog();
+  }, []);
+
   return (
     <main>
       <Navbar />
@@ -113,7 +140,7 @@ export default function Blogs() {
           </div>
         </div>
       </div> */}
-      <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20 text-start bg-slate-800">
+      <section className=" min-h-screen pt-20 pb-10 lg:pt-[120px] lg:pb-20 text-start bg-slate-800">
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4">
@@ -131,94 +158,44 @@ export default function Blogs() {
               </div>
             </div>
           </div>
-          <div className="-mx-4 flex flex-wrap">
-            <div className=" w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="mx-auto mb-10 max-w-[370px] border rounded pb-2">
-                <div className="mb-8 overflow-hidden rounded">
-                  <img
-                    src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-01.jpg"
-                    alt="image"
-                    className="w-full"
-                  />
-                </div>
-                <div className="p-4">
-                  <span className="bg-blue-500 mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white">
-                    Dec 22, 2023
-                  </span>
-                  <p>
-                    <a
-                      href="javascript:void(0)"
-                      className="text-dark hover:text-blue-500 mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
-                    >
-                      Meet AutoManage, the best AI management tools
-                    </a>
-                  </p>
-                  <p className="text-body-color text-base">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="mx-auto mb-10 max-w-[370px] border rounded pb-2">
-                <div className="mb-8 overflow-hidden rounded">
-                  <img
-                    src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-02.jpg"
-                    alt="image"
-                    className="w-full"
-                  />
-                </div>
-                <div className="p-4">
-                  <span className="bg-blue-500 mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white">
-                    Mar 15, 2023
-                  </span>
-                  <p>
-                    <a
-                      href="javascript:void(0)"
-                      className="text-dark hover:text-blue-500 mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
-                    >
-                      How to earn more money as a wellness coach
-                    </a>
-                  </p>
-                  <p className="text-body-color text-base">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="mx-auto mb-10 max-w-[370px] border rounded pb-2">
-                <div className="mb-8 overflow-hidden rounded">
-                  <img
-                    src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-03.jpg"
-                    alt="image"
-                    className="w-full"
-                  />
-                </div>
-                <div className="p-4">
-                  <span className="bg-blue-500 mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white">
-                    Jan 05, 2023
-                  </span>
-                  <p>
-                    <a
-                      href="javascript:void(0)"
-                      className="text-dark hover:text-blue-500 mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
-                    >
-                      The no-fuss guide to upselling and cross selling
-                    </a>
-                  </p>
-                  <p className="text-body-color text-base">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="-mx-4 grid grid-cols-1 md:grid-cols-3 ">
+            {blogs?.map((blog, key) => {
+              return (
+                <Link to={blog?.link} className=" w-full h-full px-4">
+                  <div className="mx-auto min-h-[55vh] mb-10 max-w-[370px] border rounded pb-2">
+                    <div className="mb-8 overflow-hidden rounded">
+                      <img
+                        src={blog?.thumbnail}
+                        alt="image"
+                        className="w-full aspect-video"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <span className="bg-blue-500 mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white">
+                        {moment(blog?.pubDate).format("do MMM, YYYY")}
+                      </span>
+                      <p>
+                        <a
+                          href="javascript:void(0)"
+                          className="text-dark hover:text-blue-500 mb-4 inline-block text-base font-semibold"
+                        >
+                          {blog?.title}
+                        </a>
+                      </p>
+                      <p className="text-body-color text-base grid grid-cols-3">
+                        {blog.categories.map((it) => (
+                          <p className="pr-2 text-sm">{it}</p>
+                        ))}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
